@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sentiment Analysis Result</title>
+    <style>
+        body { 
+            font-family: Arial, sans-serif; 
+            background: linear-gradient(to bottom, #f4f4f4, #333); 
+            margin: 0; 
+            padding: 0; 
+        }
+        .container { 
+            max-width: 600px; 
+            margin: 50px auto; 
+            padding: 20px; 
+            background-color: white; 
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+            border-radius: 10px; 
+        }
+        h1 { 
+            text-align: center; 
+            color: #4CAF50; 
+        }
+        .result { 
+            margin-top: 20px; 
+        }
+        .result p { 
+            font-size: 18px; 
+        }
+        .link-container {
+            text-align: center; 
+            margin-top: 20px; 
+        }
+        .link-container a {
+            color: #4CAF50; 
+            text-decoration: none; 
+            font-size: 16px;
+        }
+        .link-container a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Sentiment Analysis Result</h1>
+        <div class="result">
+            <p><strong>Input Text:</strong> {{ user_input }}</p>
+            <p><strong>Sentiment Score:</strong> {{ sentiment_score }}</p>
+            <p><strong>Sentiment Label:</strong> {{ sentiment_label }}</p>
+        </div>
+        <div class="link-container">
+            <a href="{% url 'index' %}">Analyze Another Text</a>
+        </div>
+    </div>
+</body>
+</html>
